@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <Box>
-      <AppBar className="appbar">
+      <AppBar className="appbar" position="sticky">
         <Toolbar>
           <Box className="navbtn">
             <Button

@@ -1,0 +1,9 @@
+.rct-header-root {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* Apply to all children dynamically */
+.rct-dateHeader-primary > span {
+    color: black;
+}
