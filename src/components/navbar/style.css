@@ -1,0 +1,22 @@
+.appbar{
+	background-color: white !important;
+}
+
+.navbtn > button {
+  color: blue;
+  border-color: blue; /* Ensure outlined button borders are visible */
+  margin: 0 5px; /* Optional: Add some spacing between buttons */
+}
+
+.viewgrp{
+	margin-left: auto;
+}
+.viewgrp > button {
+	color: blue;
+	border-color: blue; /* Ensure outlined button borders are visible */
+}
+.viewgrp > .MuiToggleButton-root.Mui-selected {
+  background-color: blue !important; /* Active background color */
+  color: white !important; /* Active text color */
+  border-color: blue !important; /* Active border color */
+}
