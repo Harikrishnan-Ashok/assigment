@@ -4,13 +4,11 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import "./style.css";
-import { useState } from "react";
+import { useContext } from "react";
+import { ViewContext } from "../../context/ViewContext";
 
 export default function Navbar() {
-  const [view, setView] = useState(0);
-  const handleChange = (event, newView) => {
-    setView(newView);
-  };
+  const { view, handleViewChange } = useContext(ViewContext);
 
   return (
     <Box>
@@ -31,7 +29,7 @@ export default function Navbar() {
             className="viewgrp"
             value={view}
             exclusive
-            onChange={handleChange}
+            onChange={handleViewChange}
           >
             <ToggleButton value={0}>1 Day</ToggleButton>
             <ToggleButton value={1}>2 Day</ToggleButton>
