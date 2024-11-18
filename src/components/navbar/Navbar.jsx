@@ -1,10 +1,13 @@
+import {
+  ToggleButton,
+  ToggleButtonGroup,
+  Box,
+  AppBar,
+  Toolbar,
+  Button,
+} from "@mui/material";
 import { useContext } from "react";
 import { ViewContext } from "../../context/ViewContext";
-import Box from "@mui/material/Box";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
-import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import "./style.css";
 
 export default function Navbar() {
@@ -13,7 +16,7 @@ export default function Navbar() {
   return (
     <Box>
       <AppBar className="appbar" position="sticky">
-        <Toolbar>
+        <Toolbar className="toolbar">
           <Box className="navbtn">
             <Button
               variant="outlined"

@@ -1,23 +1,56 @@
-.appbar{
-	background-color: white !important;
-	box-shadow: none !important;
+/* General styling for the app bar */
+.appbar {
+  background-color: white !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid #e0e0e0; /* Subtle bottom border for separation */
+}
+
+/* Styling for buttons inside the navigation bar */
+.navbtn {
+  padding: 10px;
+  display: flex;
+  gap: 8px; /* Adds consistent spacing between buttons */
 }
 
 .navbtn > button {
   color: blue;
-  border-color: blue; /* Ensure outlined button borders are visible */
-  margin: 0 5px; /* Optional: Add some spacing between buttons */
+  border-color: blue;
+  text-transform: none; /* Optional: Prevents text from being uppercase */
 }
 
-.viewgrp{
-	margin-left: auto;
+/* View group styling */
+.viewgrp {
+  margin-left: auto;
+  padding:10px;
 }
+
 .viewgrp > button {
-	color: blue;
-	border-color: blue; /* Ensure outlined button borders are visible */
+  color: blue;
+  border-color: blue;
 }
+
 .viewgrp > .MuiToggleButton-root.Mui-selected {
-  background-color: blue !important; /* Active background color */
-  color: white !important; /* Active text color */
-  border-color: blue !important; /* Active border color */
+  background-color: blue !important; /* Active button background */
+  color: white !important; /* Active button text */
+  border-color: blue !important; /* Active button border */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the left */
+    gap: 16px; /* Adds spacing between rows */
+  }
+
+  .navbtn {
+    width: 100%;
+
+  }
+
+  .viewgrp {
+    width: 100%; /* Makes toggle group span the full width */
+	padding: 0;
+	padding-bottom: 10px;
+  }
 }

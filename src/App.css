@@ -1,6 +1,20 @@
-.body{
-	background-color: white;
+body {
+  background-color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
+
 .cont {
-	padding-top: "1px";
-} 
+  padding: 16px; /* Small padding for better spacing */
+  max-width: 1200px; /* Optional: Limit max width for better readability on large screens */
+  margin: 0 auto; /* Center the container */
+  background-color: #f9f9f9; /* Slight off-white for contrast */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+@media (max-width: 768px) {
+  .cont {
+    padding: 8px; /* Reduce padding on smaller screens */
+  }
+}

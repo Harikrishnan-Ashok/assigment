@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
       <Navbar></Navbar>
-      <Container>
+      <Container className="cont">
         <BasicTimeline></BasicTimeline>
       </Container>
     </>

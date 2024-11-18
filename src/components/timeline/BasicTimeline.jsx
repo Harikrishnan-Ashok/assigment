@@ -6,10 +6,11 @@ import { ViewContext } from "../../context/ViewContext";
 import users from "../../data/users.json";
 
 import scheduleData from "../../data/data.json";
+import "./style.css";
 
 const BasicTimeline = () => {
   const { move, moveCount, view } = useContext(ViewContext);
-  const [timeStart, setTimeStart] = useState(moment());
+  const [timeStart, setTimeStart] = useState(moment("2022-10-01"));
 
   // View configuration
   const viewOrder = (() => {
@@ -32,7 +33,7 @@ const BasicTimeline = () => {
   // Handle timeline navigation
   useEffect(() => {
     if (move === 0) {
-      setTimeStart(moment());
+      setTimeStart(moment("2022-10-01"));
     } else if (move === -1) {
       setTimeStart((current) =>
         current.clone().subtract(viewOrder.interval, viewOrder.type)
@@ -88,9 +89,13 @@ const BasicTimeline = () => {
     ...createTimelineItems(scheduleData.overrideLayer, 3),
     ...createTimelineItems(scheduleData.finalSchedule, 4),
   ];
+  console.log(timeStart);
 
   return (
     <div className="h-screen w-full p-4">
+      <h2 className="heading">
+        {timeStart.format("YYYY-MMM-DD")} - {timeEnd.format("YYYY-MMM-DD")}
+      </h2>
       <Timeline
         groups={groups}
         items={items}
