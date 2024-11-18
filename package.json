@@ -12,20 +12,12 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "^6.1.7",
     "@mui/material": "^6.1.7",
-    "chart.js": "^4.4.6",
-    "date-fns": "^4.1.0",
     "interactjs": "^1.10.27",
     "moment": "^2.30.1",
     "react": "^18.3.1",
     "react-calendar-timeline": "^0.28.0",
-    "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18.3.1",
-    "react-google-charts": "^5.2.1",
-    "react-visjs-timeline": "^1.6.0",
-    "vis": "^4.21.0-EOL",
-    "vis-timeline": "^7.7.3"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
